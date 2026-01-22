@@ -17,3 +17,7 @@ matplotlib
 numpy
 linkify-it-py
 sphinx-accessibility
+sphinx-tabs
+sphinx-togglebutton
+sphinxext-opengraph
+sphinxcontrib-tikz

@@ -7,7 +7,6 @@ release = '1.0.0'
 
 # Extensions for rich content and accessibility
 extensions = [
-    'sphinx.ext.mathjax',
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
@@ -17,6 +16,10 @@ extensions = [
     'sphinxcontrib.video',
     'numpydoc',
     'sphinx_accessibility',
+    'sphinx_tabs.tabs',
+    'sphinx_togglebutton',
+    'sphinxext.opengraph',
+    'sphinxcontrib.tikz',
 ]
 
 # MyST parser configuration for Markdown support
@@ -30,7 +33,7 @@ myst_enable_extensions = [
     'replacements',
 ]
 
-myst_fence_as_directive = ['mermaid']
+myst_fence_as_directive = ['mermaid', 'tikz']
 
 # HTML output configuration
 html_theme = 'sphinx_book_theme'
@@ -51,29 +54,6 @@ html_theme_options = {
     'navigation_with_keys': True,
     'extra_footer': '',
     'secondary_sidebar_items': ['page-toc'],
-}
-
-# MathJax configuration for better math rendering
-mathjax_config = {
-    'tex': {
-        'inlineMath': [['$', '$'], ['\\(', '\\)']],
-        'displayMath': [['$$', '$$'], ['\\[', '\\]']],
-        'macros': {
-            'RR': r'\mathbb{R}',
-            'CC': r'\mathbb{C}',
-            'NN': r'\mathbb{N}',
-            'ZZ': r'\mathbb{Z}',
-        }
-    },
-    'svg': {
-        'fontCache': 'global'
-    },
-    'chtml': {
-        'scale': 1.0,
-        'minScale': 0.5,
-        'matchFontHeight': True,
-        'mtextInheritFont': True,
-    }
 }
 
 # Build configuration
@@ -127,6 +107,9 @@ suppress_warnings = ['app.add_config_value']
 # Custom CSS for improved accessibility
 def setup(app):
     app.add_css_file('custom_accessibility.css')
+    app.add_css_file('https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css')
+    app.add_js_file('https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js')
+    app.add_js_file('lightbox_init.js')
     return {
         'version': '0.1',
         'parallel_read_safe': True,
