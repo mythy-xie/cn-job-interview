@@ -160,19 +160,19 @@ Create mathematical diagrams with TikZ:
 
 Use toggles to hide/show content:
 
-```markdown
+````markdown
 ```{toggle}
 Click to reveal solution
 
 The answer is 42.
 ```
-```
+````
 
 ### Cards and Callouts
 
 Use design components for emphasis:
 
-```markdown
+````markdown
 ```{note}
 This is important information.
 ```
@@ -184,7 +184,7 @@ Be careful with this!
 ```{tip}
 Helpful hint for solving problems.
 ```
-```
+````
 
 ### Images with Alt Text
 
