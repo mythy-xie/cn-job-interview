@@ -104,6 +104,15 @@ intersphinx_mapping = {
 # Suppress certain warnings
 suppress_warnings = ['app.add_config_value']
 
+# TikZ configuration
+tikz_tikzlibraries = 'arrows,automata,backgrounds,calc,fit,matrix,mindmap,patterns,petri,positioning,shapes,shapes.geometric,shapes.misc,trees'
+tikz_latex_preamble = r'\usepackage{amsmath}\usepackage{amssymb}'
+tikz_proc_suite = 'pdf2svg'
+tikz_transparent = True
+tikz_latex_engine = 'pdflatex'
+# Ensure white background
+tikz_latex_preamble += r'\pagecolor{white}\color{black}'
+
 # Custom CSS for improved accessibility
 def setup(app):
     app.add_css_file('custom_accessibility.css')
