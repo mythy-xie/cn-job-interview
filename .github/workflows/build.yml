@@ -36,7 +36,6 @@ jobs:
       - name: Build Sphinx documentation
         run: |
           sphinx-build -T -W --keep-going -b html doc _build/html
-          sphinx-build -T -W --keep-going -b epub doc _build/epub
       
       - name: Check for accessibility warnings
         run: |
@@ -60,21 +59,3 @@ jobs:
           publish_branch: gh-pages
           force_orphan: true
           cname: ''
-      
-      - name: Create Release with EPUB
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: softprops/action-gh-release@v1
-        with:
-          files: _build/epub/Math Textbook.epub
-          tag_name: v${{ github.run_number }}
-          name: Release v${{ github.run_number }}
-          body: |
-            Automated EPUB build from latest documentation.
-            
-            **Download:** Math Textbook.epub
-            
-            Read on any EPUB reader (Kindle, Apple Books, Kobo, etc.)
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -2,8 +2,9 @@
 
 project = 'Math Textbook'
 copyright = '2026'
-author = ''
+author = 'Michael McCabe'
 release = '1.0.0'
+version = '1.0.0'
 
 # Extensions for rich content and accessibility
 extensions = [
@@ -97,9 +98,9 @@ latex_documents = [
 # Intersphinx for cross-referencing
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3', None),
-    'numpy': ('https://numpy.org/doc/stable', None),
-    'scipy': ('https://docs.scipy.org/doc/scipy', None),
-    'matplotlib': ('https://matplotlib.org/stable', None),
+    #'numpy': ('https://numpy.org/doc/stable', None),
+    #'scipy': ('https://docs.scipy.org/doc/scipy', None),
+    #'matplotlib': ('https://matplotlib.org/stable', None),
 }
 
 # Suppress certain warnings
