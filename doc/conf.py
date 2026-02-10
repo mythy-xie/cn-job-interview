@@ -1,8 +1,8 @@
 # Configuration file for Sphinx documentation builder
 
-project = 'Math Textbook'
+project = '[CN] AI-Related Job Interview Guide'
 copyright = '2026'
-author = 'Michael McCabe'
+author = 'Hongyang Xie'
 release = '1.0.0'
 version = '1.0.0'
 
