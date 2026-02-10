@@ -30,6 +30,6 @@ CN JOB INTERVIEW
 
 .. raw:: html
 
-    <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=ZCsRK7CQHSZJQxrnLcAgaHOOtEW48VOrECFhVBUbGY0&cl=ffffff&w=a"></script>
+    <div style="width: 150px;"> <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=ZCsRK7CQHSZJQxrnLcAgaHOOtEW48VOrECFhVBUbGY0&cl=ffffff&w=a"></script>
 
 
