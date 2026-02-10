@@ -1,0 +1,224 @@
+/* Enhanced Accessibility Stylesheet for Math Textbook */
+
+/* Font sizing and readability */
+body {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Improved contrast for better visibility */
+.wy-nav-content {
+    max-width: 900px;
+}
+
+/* Mathematical content styling */
+.math {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.math-block {
+    padding: 1em;
+    background-color: #f8f9fa;
+    border-left: 4px solid #0066cc;
+    margin: 1em 0;
+}
+
+/* Code block accessibility */
+.highlight {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1em;
+    overflow-x: auto;
+}
+
+code {
+    background-color: #f0f0f0;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.95em;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Heading accessibility */
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2em;
+    border-bottom: 3px solid #0066cc;
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 1.6em;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 0.2em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+/* Definition and note blocks */
+.admonition {
+    padding: 1em;
+    margin: 1.5em 0;
+    border-left: 5px solid #0066cc;
+    background-color: #f0f7ff;
+    border-radius: 4px;
+}
+
+.admonition.warning {
+    border-left-color: #ff6b6b;
+    background-color: #ffe0e0;
+}
+
+.admonition.important {
+    border-left-color: #ffa500;
+    background-color: #fff5e0;
+}
+
+.admonition.tip {
+    border-left-color: #51cf66;
+    background-color: #e6f7ed;
+}
+
+.admonition-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.75em;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1em 0;
+    padding-left: 2em;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Links */
+a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #663399;
+}
+
+a:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* Skip to main content link (for screen readers) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #0066cc;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus indicators */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* Image accessibility */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 0.5em;
+}
+
+/* Navbar accessibility improvements */
+.wy-nav-top {
+    background-color: #2980B9;
+    padding: 0.5em;
+}
+
+.wy-side-nav-search {
+    padding: 1em;
+}
+
+.wy-side-nav-search input[type="text"] {
+    border: 2px solid #ccc;
+    padding: 0.5em;
+    width: 90%;
+}
+
+/* Print styles */
+@media print {
+    a {
+        text-decoration: underline;
+    }
+    
+    .admonition, .note, .warning {
+        page-break-inside: avoid;
+    }
+    
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+    }
+}
